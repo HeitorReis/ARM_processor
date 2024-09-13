@@ -1,0 +1,6 @@
+Warning (10268): Verilog HDL information at PC_main.v(21): always construct contains both blocking and non-blocking assignments File: D:/LabAOC/Processor_V2/modules/PC_main.v Line: 21
+Info (10281): Verilog HDL Declaration information at output_module.v(5): object "HEX0" differs only in case from object "hex0" in the same scope File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 5
+Info (10281): Verilog HDL Declaration information at output_module.v(6): object "HEX1" differs only in case from object "hex1" in the same scope File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 6
+Info (10281): Verilog HDL Declaration information at output_module.v(7): object "HEX2" differs only in case from object "hex2" in the same scope File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 7
+Info (10281): Verilog HDL Declaration information at output_module.v(10): object "HEX3" differs only in case from object "hex3" in the same scope File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 10
+Warning (10268): Verilog HDL information at alu.v(17): always construct contains both blocking and non-blocking assignments File: D:/LabAOC/Processor_V2/modules/alu.v Line: 17

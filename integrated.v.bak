@@ -1,0 +1,11 @@
+module integrated (
+
+	input clock,
+	input reset,
+	
+	output [31:0] output0,
+	output [31:0] output1,
+	output [31:0] output2,
+	output [31:0] output3
+
+);

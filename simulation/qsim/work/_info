@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/LabAOC/Processor_V2/simulation/qsim
+vhard_block
+Z1 !s110 1726209740
+!i10b 1
+!s100 9_8m;_MIL<`ePG1Y;;F3G3
+I:SWkU[^[jShT1eDf2Dcd72
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1726209738
+Z4 8Processor.vo
+Z5 FProcessor.vo
+L0 91940
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1726209740.000000
+Z8 !s107 Processor.vo|
+Z9 !s90 -work|work|Processor.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vProcessor
+R1
+!i10b 1
+!s100 =TB_Q4>J:E`ZleJoTfd>51
+IUR]06A]eBO>zfNA=E8WA90
+R2
+R0
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@processor
+vProcessor_vlg_vec_tst
+R1
+!i10b 1
+!s100 ;SE?_@5^oR7KV>Jd^WAll3
+IRj7RR<UDNaH:mk9C4^WnO3
+R2
+R0
+w1726209736
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@processor_vlg_vec_tst

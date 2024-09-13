@@ -1,0 +1,39 @@
+module CPSRegister (
+	// Set Condition code
+	input should_set,
+	input should_operate,
+	
+	// CPSR bits to be updated
+	input [3:0] new_states,
+	
+	input Clock,
+	
+	output reg [3:0] current_states
+	
+);
+
+	reg [3:0] current_states_reg;
+	
+	initial begin
+	
+		current_states_reg = 4'b0;
+	
+	end
+
+	always@( posedge Clock ) begin
+			
+		if (should_set & should_operate) begin
+		
+			current_states_reg <= new_states;
+			
+		end
+		
+	end
+	
+	always@( negedge Clock ) begin
+		
+		current_states <= current_states_reg;
+	
+	end
+
+endmodule

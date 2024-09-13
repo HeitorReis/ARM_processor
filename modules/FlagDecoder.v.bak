@@ -1,0 +1,21 @@
+module FlagDecoder (
+	
+	input [31:0] result_in,
+	
+	input zero,
+	input negative,
+	
+	output reg [3:0] flags_out
+	
+);
+
+	always@* begin
+
+		flags_out[3:2] <= 2'b00;
+	
+		flags_out[0] <= zero;
+		flags_out[1] <= negative;
+	
+	end
+
+endmodule

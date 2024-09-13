@@ -1,0 +1,82 @@
+module FlagVerifier (
+
+	input [3:0] cond_field,
+	input [3:0] flags,
+	
+	output reg should_operate
+
+);
+
+	always@* begin
+	
+		case (cond_field)
+		
+			4'b0000: should_operate = 1; 	// ALWAYS case
+			
+			4'b0001: begin						// EQUAL case
+			
+				if (flags[0])
+					should_operate = 1;
+					
+				else
+					should_operate = 0;
+				
+			end
+			
+			4'b0010: begin						// NOT EQUAL case
+			
+				if (~flags[0])
+					should_operate = 1;
+					
+				else
+					should_operate = 0;
+				
+			end
+			
+			4'b0011: begin						// GREATER THAN case
+			
+				if (~flags[0] & ~flags[1])
+					should_operate = 1;
+					
+				else
+					should_operate = 0;
+				
+			end
+			
+			4'b0100: begin						// GREATER THAN OR EQUAL case
+			
+				if (flags[0] | ~flags[1])
+					should_operate = 1;
+					
+				else
+					should_operate = 0;
+				
+			end
+			
+			4'b0101: begin						// LESS THAN case
+			
+				if (flags[1])
+					should_operate = 1;
+					
+				else
+					should_operate = 0;
+				
+			end
+			
+			4'b0110:begin						// LESS THAN OR EQUAL case
+			
+				if (flags[0] | flags[1])
+					should_operate = 1;
+					
+				else
+					should_operate = 0;
+				
+			end
+			
+			default: should_operate = 0;
+			
+		endcase
+	
+	end
+
+endmodule

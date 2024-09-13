@@ -1,0 +1,59 @@
+module CPSR_module	(
+
+	input [31:0] ALUresult,
+	
+	input bit_S,
+	
+	input zero,
+	input negative,
+	
+	input [3:0] Cond_field,
+	
+	input clock,
+	
+	output write_condition,
+	
+	output [3:0] flags // Test
+	
+);
+
+	wire [3:0] cpsr_out;
+	wire [3:0] cpsr_in;
+
+	FlagVerifier FlagVerifier(
+
+		.cond_field(Cond_field),
+		.flags(cpsr_out),
+		
+		.should_operate(write_condition)
+
+	);
+
+	CPSRegister CPSRegister(
+		// Set Condition code
+		.should_set(bit_S),
+		.should_operate(write_condition),
+		
+		// CPSR bits to be updated
+		.new_states(cpsr_in),
+		
+		.Clock(clock),
+		
+		.current_states(cpsr_out)
+	);
+
+
+	FlagDecoder FlagDecoder(
+		
+		.result_in(ALUresult),
+		
+		.zero(zero),
+		.negative(negative),
+		
+		.flags_out(cpsr_in)
+		
+	);
+
+	assign flags = cpsr_out;
+
+endmodule
