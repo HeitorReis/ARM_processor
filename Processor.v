@@ -29,7 +29,10 @@ module Processor(
 	integrated modules(
 	
 		.clock(true_clock),
-		.reset(SW[0]),
+		.reset(SW[16]),
+		
+		.peripheral_signal(SW[15]),
+		.peripheral_value(SW[4:0]),
 		
 		.write_condition(LEDR[0]),
 		
@@ -46,16 +49,16 @@ module Processor(
 		
 		.HEX0(HEX0),
 		.HEX1(HEX1),
-		.HEX2(),
-		.HEX3()
+		.HEX2(HEX2),
+		.HEX3(HEX3)
 
 	);
 	output_module output_group1( // r0 value
 
 		.number(output1),
 		
-		.HEX0(HEX2),
-		.HEX1(HEX3),
+		.HEX0(),
+		.HEX1(),
 		.HEX2(),
 		.HEX3()
 

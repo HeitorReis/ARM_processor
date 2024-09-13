@@ -1,5 +1,5 @@
 Flow report for Processor
-Fri Sep 13 16:44:38 2024
+Fri Sep 13 18:19:08 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Sep 13 16:44:38 2024       ;
+; Flow Status                        ; Successful - Fri Sep 13 18:19:08 2024       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
 ; Top-level Entity Name              ; Processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,338                                       ;
-;     Total combinational functions  ; 3,340                                       ;
-;     Dedicated logic registers      ; 1,067                                       ;
+; Total logic elements               ; 3,600 / 114,480 ( 3 % )                     ;
+;     Total combinational functions  ; 3,310 / 114,480 ( 3 % )                     ;
+;     Dedicated logic registers      ; 1,067 / 114,480 ( < 1 % )                   ;
 ; Total registers                    ; 1067                                        ;
-; Total pins                         ; 80                                          ;
+; Total pins                         ; 80 / 529 ( 15 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 1,056                                       ;
-; Embedded Multiplier 9-bit elements ; 6                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total memory bits                  ; 1,056 / 3,981,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 6 / 532 ( 1 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/13/2024 16:44:28 ;
+; Start date & time ; 09/13/2024 18:17:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Processor           ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 2543713498928.172625666833276          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 2543713498928.172626227233640          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -98,8 +98,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4854 MB             ; 00:00:09                           ;
-; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4847 MB             ; 00:00:09                           ;
+; Fitter               ; 00:01:03     ; 1.1                     ; 6136 MB             ; 00:00:46                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4703 MB             ; 00:00:01                           ;
+; Total                ; 00:01:14     ; --                      ; --                  ; 00:00:56                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,6 +111,8 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -116,6 +120,8 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
+quartus_fit --read_settings_files=off --write_settings_files=off Processor -c Processor
+quartus_asm --read_settings_files=off --write_settings_files=off Processor -c Processor
 
 
 

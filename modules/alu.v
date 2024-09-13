@@ -1,6 +1,7 @@
 module alu (
 	input signed [31:0] A,
 	input signed [31:0] B,
+	input [31:0] peripheral_value,
 	input [1:0] TypeCode,
 	input [3:0] OpCode,
 	output reg signed [31:0] result,
@@ -27,6 +28,7 @@ module alu (
 				4'b0110: result = A ^ B; // XOR
 				4'b0111: result = -A;  // NOT
 				4'b1000: result = B;  // MOV
+				4'b1001: result = peripheral_value;
 			
 				default: result = 32'b0;
 			

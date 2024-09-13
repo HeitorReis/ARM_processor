@@ -35,16 +35,16 @@ module registerBank ( // Inputs are Rh, Ro (Op2), Clock, TypeCode, WriteData (to
 	always@(posedge clock) begin
 		// If should write
 		if (write_condition) begin
-			if ( (TypeCode == 2'b00) | ( (TypeCode == 2'b01) & Load ) ) begin
-			
+		
+			if ( (TypeCode == 2'b00) | ( (TypeCode == 2'b01) & Load ) )
 					regBank[RdAddress] = WriteData; // Write
 					
-			end
 			if ( should_store_link )
 				LinkRegister = new_LinkValue;
 		end
-		
 	end
+	
+	
 	
 	assign r31_value = regBank[31];
 	assign r0_value = regBank[0];

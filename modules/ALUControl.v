@@ -9,6 +9,7 @@ module ALUControl (
 	input [31:0] immediate_value,
 	input signed [31:0] RhValue,
 	input signed [31:0] RoValue,
+	input [31:0] peripheral_value,
 	
 	// Outputs
 	output zero,
@@ -35,6 +36,7 @@ module ALUControl (
 	alu alu (
 		.A(RhValue),
 		.B(operand2),
+		.peripheral_value(peripheral_value),
 		.TypeCode(TypeCode),
 		.OpCode(OpCode),
 		.result(result),

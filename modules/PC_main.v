@@ -7,6 +7,7 @@ module PC_main (
 	input write_condition,
 	input should_branch_to_link,
 	
+	input halt_temporarily_signal,
 	input clock,
 	
 	input reset,
@@ -20,30 +21,30 @@ module PC_main (
 	
 	always@( negedge clock ) begin // When clock ticksdown
 
-		if (reset) // If reset
-			instruction_address = 0; // Reset
+		if (~halt_temporarily_signal) begin
 		
-		else begin // Else
+			if (reset) // If reset
+				instruction_address = 0; // Reset
 			
-			instruction_address = instruction_address + 1; // Add one to PC
-		
-			if (write_condition) begin // If should save
+			else begin // Else
+				
+				instruction_address = instruction_address + 1; // Add one to PC
 			
-				if (should_branch) begin // If should branch
-					
-					if (should_branch_to_link) // If should branch to link
-						instruction_address = link_value; // Then, branch to link
-					
-					else
+				if (write_condition) begin // If should save
+				
+					if (should_branch) begin // If should branch
+						
+						if (should_branch_to_link) // If should branch to link
+							instruction_address = link_value; // Then, branch to link
+						
+						else
 
-						instruction_address = instruction_address + branch_value; // Else, branch to value
-					
-				end 
-			
+							instruction_address = instruction_address + branch_value; // Else, branch to value
+						
+					end 
+				end
 			end
-		
 		end
-	
 	end
 	
 	assign link = instruction_address;

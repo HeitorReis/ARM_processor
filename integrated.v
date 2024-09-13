@@ -3,6 +3,9 @@ module integrated (
 	input clock,
 	input reset,
 	
+	input peripheral_signal,
+	input [31:0] peripheral_value,
+	
 	output write_condition,
 	
 	output [31:0] output0,
@@ -13,8 +16,8 @@ module integrated (
 );
 
 	assign output0 = r31_value;
-	assign output1 = r0_value;
-	assign output2 = rd_addr;
+	assign output1 = r0_value; // Won't be used
+	assign output2 = r0_value;
 	assign output3 = current_instr_addr;
 
 	// Values
@@ -44,6 +47,7 @@ module integrated (
 	wire zero_bit;
 	wire neg_bit;
 	wire should_write_using_ram;
+	wire halt_temporarily_signal;
 	
 	// Addresses
 	wire [4:0] rh_addr;
@@ -54,9 +58,11 @@ module integrated (
 	// UC
 	ControlUnit integrated0(
 
-		//input clk, rst,
 		
 		.instruction(current_instr_code),
+		.peripheral_signal(peripheral_signal),
+		.halt_temporarily_signal(halt_temporarily_signal),
+		.clock(clock),
 		
 		// Output register bank
 		.TypeCode(TypeCode),
@@ -99,6 +105,7 @@ module integrated (
 		.write_condition(write_condition),
 		.should_branch_to_link(should_branch_to_link),
 		
+		.halt_temporarily_signal(halt_temporarily_signal),
 		.clock(clock),
 		
 		.reset(reset),
@@ -156,6 +163,7 @@ module integrated (
 		.immediate_value(extended_immediate),
 		.RhValue(rh_value),
 		.RoValue(ro_value),
+		.peripheral_value(peripheral_value),
 		
 		// Outputs
 		.zero(zero_bit),
