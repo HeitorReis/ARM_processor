@@ -197,7 +197,7 @@ module integrated (
 		.data_saved() // Test
 	);
 	
-	assign should_write_using_ram = ~Load_bit & ~TypeCode[0] & ~TypeCode[1];
+	assign should_write_using_ram = TypeCode[0] & ~TypeCode[1] & ~Load_bit;
 	
 	always@(should_write_using_ram or ram_output or alu_result) begin
 	

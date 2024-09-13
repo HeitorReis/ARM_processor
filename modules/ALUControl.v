@@ -20,12 +20,8 @@ module ALUControl (
 	
 );
 
-	// These enter ALU
-	wire [31:0] operand1;
-	wire [31:0] operand2;
-	
-	// Op1 is always RhValue
-	assign operand1 = RhValue;
+	// ALU input
+	reg [31:0] operand2;
 	
 	always@(is_immediate or immediate_value or RoValue) begin
 		
@@ -37,7 +33,7 @@ module ALUControl (
 	end
 
 	alu alu (
-		.A(operand1),
+		.A(RhValue),
 		.B(operand2),
 		.TypeCode(TypeCode),
 		.OpCode(OpCode),

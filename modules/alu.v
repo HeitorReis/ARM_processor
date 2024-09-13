@@ -4,7 +4,7 @@ module alu (
 	input [1:0] TypeCode,
 	input [3:0] OpCode,
 	output reg signed [31:0] result,
-	output negative,
+	output reg negative,
 	output reg zero,
 	
 	// Test
@@ -27,7 +27,7 @@ module alu (
 				4'b0101: result <= A | B; // OR
 				4'b0110: result <= A ^ B; // XOR
 				4'b0111: result <= -A;  // NOT
-				4'b1000: result <= A;  // MOV
+				4'b1000: result <= B;  // MOV
 			
 				default: result <= 32'b0;
 			
@@ -46,9 +46,14 @@ module alu (
 			zero = 1;
 		else
 			zero = 0;
+		
+		if (result < 0)
+			negative = 1;
+		else
+			negative = 0;
 	end
 	
-	assign negative = result[31];
+	// Testing
 	assign r1_value = A;
 	assign r2_value = B;
 
