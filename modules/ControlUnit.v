@@ -54,8 +54,8 @@ module ControlUnit (
 	assign OpCode = instruction [23:20];
 	// assign TypeCode = instruction [27:26];
 	assign is_immediate = instruction [25];
-	assign extended_immediate = {22'b0, instruction [9:0] };
 	
+	assign extended_immediate = {{22{instruction[9]}}, instruction[9:0]};
 	
 	// Data Memory management
 	// assign Load = instruction [20];
