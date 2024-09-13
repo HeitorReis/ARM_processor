@@ -34,7 +34,7 @@ module integrated (
 	wire Load_bit;
 	wire should_store_link;
 	wire is_immediate;
-	wire [1:0] OpCode;
+	wire [3:0] OpCode;
 	wire should_use_data_memory;
 	wire [3:0] CondField;
 	wire set_cond_bit;
@@ -206,6 +206,6 @@ module integrated (
 			write_in_reg = ram_output;
 		else
 			write_in_reg = alu_result;
-	end	
+	end
 	
 endmodule

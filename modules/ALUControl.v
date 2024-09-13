@@ -7,16 +7,16 @@ module ALUControl (
 	
 	// Values
 	input [31:0] immediate_value,
-	input [31:0] RhValue,
-	input [31:0] RoValue,
+	input signed [31:0] RhValue,
+	input signed [31:0] RoValue,
 	
 	// Outputs
 	output zero,
 	output negative,
-	output [31:0] result,
+	output signed [31:0] result,
 	
-	output [31:0] r1_value,
-	output [31:0] r2_value
+	output signed[31:0] r1_value,
+	output signed [31:0] r2_value
 	
 );
 
