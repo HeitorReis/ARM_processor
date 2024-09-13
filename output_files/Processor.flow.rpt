@@ -1,5 +1,5 @@
 Flow report for Processor
-Fri Sep 13 10:40:22 2024
+Fri Sep 13 10:43:18 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Sep 13 10:40:22 2024       ;
+; Flow Status                        ; Successful - Fri Sep 13 10:43:18 2024       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
 ; Top-level Entity Name              ; Processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,144                                       ;
-;     Total combinational functions  ; 3,146                                       ;
-;     Dedicated logic registers      ; 1,038                                       ;
+; Total logic elements               ; 3,378 / 114,480 ( 3 % )                     ;
+;     Total combinational functions  ; 3,146 / 114,480 ( 3 % )                     ;
+;     Dedicated logic registers      ; 1,038 / 114,480 ( < 1 % )                   ;
 ; Total registers                    ; 1038                                        ;
-; Total pins                         ; 80                                          ;
+; Total pins                         ; 80 / 529 ( 15 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 1,056                                       ;
-; Embedded Multiplier 9-bit elements ; 6                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total memory bits                  ; 1,056 / 3,981,312 ( < 1 % )                 ;
+; Embedded Multiplier 9-bit elements ; 6 / 532 ( 1 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -99,7 +99,12 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4879 MB             ; 00:00:10                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:10                           ;
+; Fitter               ; 00:01:42     ; 1.0                     ; 6081 MB             ; 00:01:09                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4709 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:18     ; 2.2                     ; 5200 MB             ; 00:00:15                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4655 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:01                           ;
+; Total                ; 00:02:15     ; --                      ; --                  ; 00:01:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -109,6 +114,11 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; ReisBros-G15     ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -116,6 +126,11 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
+quartus_fit --read_settings_files=off --write_settings_files=off Processor -c Processor
+quartus_asm --read_settings_files=off --write_settings_files=off Processor -c Processor
+quartus_sta Processor -c Processor
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Processor -c Processor --vector_source=D:/LabAOC/Processor_V2/Waveform.vwf --testbench_file=D:/LabAOC/Processor_V2/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/LabAOC/Processor_V2/simulation/qsim/ Processor -c Processor
 
 
 

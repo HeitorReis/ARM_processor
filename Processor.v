@@ -19,7 +19,7 @@ module Processor(
 	freqDiv freqDiv (.CLOCK_50(CLOCK_50), .clk(divided_clock));
 	
 	wire true_clock;
-	assign true_clock = CLOCK_50 & ~SW[17];
+	assign true_clock = divided_clock & ~SW[17];
 	
 	wire [31:0] output0;
 	wire [31:0] output1;

@@ -26,15 +26,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Sep 13 10:36:04 2024
+    Info: Processing started: Fri Sep 13 10:43:16 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Processor -c Processor --vector_source=D:/LabAOC/Processor_V2/Waveform.vwf --testbench_file=D:/LabAOC/Processor_V2/simulation/qsim/Waveform.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 n "HEX7[0]" in vector source file when writing test bench files
 Info (201000): Generated Verilog Test Bench File D:/LabAOC/Processor_V2/simulation/qsim/Waveform.vwf.vt for simulation
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 67 warnings
-    Info: Peak virtual memory: 4657 megabytes
-    Info: Processing ended: Fri Sep 13 10:36:05 2024
+    Info: Peak virtual memory: 4655 megabytes
+    Info: Processing ended: Fri Sep 13 10:43:17 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -63,13 +63,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Sep 13 10:36:05 2024
+    Info: Processing started: Fri Sep 13 10:43:17 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/LabAOC/Processor_V2/simulation/qsim/ Processor -c Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Processor.vo in folder "D:/LabAOC/Processor_V2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4669 megabytes
-    Info: Processing ended: Fri Sep 13 10:36:06 2024
+    Info: Peak virtual memory: 4671 megabytes
+    Info: Processing ended: Fri Sep 13 10:43:18 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -87,14 +87,14 @@ c:/intelfpga_lite/19.1/modelsim_ase/win32aloem//vsim -c -do Processor.do
 
 Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
-
 # 10.5b
+
 
 # do Processor.do
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:36:07 on Sep 13,2024
+# Start time: 10:43:19 on Sep 13,2024
 # vlog -work work Processor.vo 
 # -- Compiling module Processor
 
@@ -102,21 +102,21 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # 
 # Top level modules:
 # 	Processor
-# End time: 10:36:08 on Sep 13,2024, Elapsed time: 0:00:01
+# End time: 10:43:19 on Sep 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:36:08 on Sep 13,2024
+# Start time: 10:43:19 on Sep 13,2024
 # vlog -work work Waveform.vwf.vt 
+
 # -- Compiling module Processor_vlg_vec_tst
 # 
 # Top level modules:
 # 	Processor_vlg_vec_tst
-# End time: 10:36:08 on Sep 13,2024, Elapsed time: 0:00:00
+# End time: 10:43:19 on Sep 13,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Processor_vlg_vec_tst 
-# Start time: 10:36:08 on Sep 13,2024
+# Start time: 10:43:20 on Sep 13,2024
 # Loading work.Processor_vlg_vec_tst
 # Loading work.Processor
 # Loading work.hard_block
@@ -136,13 +136,13 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneive_ver.cycloneive_mac_mult_internal
 # Loading cycloneive_ver.cycloneive_mac_out
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 10533 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 10511 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#26
 
 # ** Note: $finish    : Waveform.vwf.vt(65)
 #    Time: 1 us  Iteration: 0  Instance: /Processor_vlg_vec_tst
-# End time: 10:36:10 on Sep 13,2024, Elapsed time: 0:00:02
+# End time: 10:43:22 on Sep 13,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -157,7 +157,7 @@ Processing channel transitions...
 
 Warning: LEDR - signal not found in VCD.
 
-Writing the resulting VWF to D:/LabAOC/Processor_V2/simulation/qsim/Processor_20240913103610.sim.vwf
+Writing the resulting VWF to D:/LabAOC/Processor_V2/simulation/qsim/Processor_20240913104326.sim.vwf
 
 Finished VCD to VWF conversion.
 
