@@ -14,7 +14,7 @@ module integrated (
 
 	assign output0 = r31_value;
 	assign output1 = r0_value;
-	assign output2 = alu_result;
+	assign output2 = rd_addr;
 	assign output3 = current_instr_addr;
 
 	// Values
