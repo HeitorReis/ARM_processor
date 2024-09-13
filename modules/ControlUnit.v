@@ -42,9 +42,9 @@ module ControlUnit (
 
 	initial halt_temporarily_signal = 0;
 
-	always@(TypeCode or OpCode or peripheral_signal) begin
+	always@(clock) begin
 		
-		if (halt_temporarily_signal & ~peripheral_signal)
+		if (halt_temporarily_signal & peripheral_signal)
 			halt_temporarily_signal = 0;
 		
 		else		
