@@ -22,6 +22,7 @@ SW[14] => ~NO_FANOUT~
 SW[15] => ~NO_FANOUT~
 SW[16] => ~NO_FANOUT~
 SW[17] => true_clock.IN0
+LEDR[0] << integrated:modules.write_condition
 HEX0[0] << output_module:output_group0.HEX0
 HEX0[1] << output_module:output_group0.HEX0
 HEX0[2] << output_module:output_group0.HEX0
@@ -116,6 +117,7 @@ clk <= S.DB_MAX_OUTPUT_PORT_TYPE
 |Processor|integrated:modules
 clock => clock.IN5
 reset => reset.IN1
+write_condition <= write_condition.DB_MAX_OUTPUT_PORT_TYPE
 output0[0] <= registerBank:integrated3.r31_value
 output0[1] <= registerBank:integrated3.r31_value
 output0[2] <= registerBank:integrated3.r31_value
@@ -180,38 +182,38 @@ output1[28] <= registerBank:integrated3.r0_value
 output1[29] <= registerBank:integrated3.r0_value
 output1[30] <= registerBank:integrated3.r0_value
 output1[31] <= registerBank:integrated3.r0_value
-output2[0] <= alu_result[0].DB_MAX_OUTPUT_PORT_TYPE
-output2[1] <= alu_result[1].DB_MAX_OUTPUT_PORT_TYPE
-output2[2] <= alu_result[2].DB_MAX_OUTPUT_PORT_TYPE
-output2[3] <= alu_result[3].DB_MAX_OUTPUT_PORT_TYPE
-output2[4] <= alu_result[4].DB_MAX_OUTPUT_PORT_TYPE
-output2[5] <= alu_result[5].DB_MAX_OUTPUT_PORT_TYPE
-output2[6] <= alu_result[6].DB_MAX_OUTPUT_PORT_TYPE
-output2[7] <= alu_result[7].DB_MAX_OUTPUT_PORT_TYPE
-output2[8] <= alu_result[8].DB_MAX_OUTPUT_PORT_TYPE
-output2[9] <= alu_result[9].DB_MAX_OUTPUT_PORT_TYPE
-output2[10] <= alu_result[10].DB_MAX_OUTPUT_PORT_TYPE
-output2[11] <= alu_result[11].DB_MAX_OUTPUT_PORT_TYPE
-output2[12] <= alu_result[12].DB_MAX_OUTPUT_PORT_TYPE
-output2[13] <= alu_result[13].DB_MAX_OUTPUT_PORT_TYPE
-output2[14] <= alu_result[14].DB_MAX_OUTPUT_PORT_TYPE
-output2[15] <= alu_result[15].DB_MAX_OUTPUT_PORT_TYPE
-output2[16] <= alu_result[16].DB_MAX_OUTPUT_PORT_TYPE
-output2[17] <= alu_result[17].DB_MAX_OUTPUT_PORT_TYPE
-output2[18] <= alu_result[18].DB_MAX_OUTPUT_PORT_TYPE
-output2[19] <= alu_result[19].DB_MAX_OUTPUT_PORT_TYPE
-output2[20] <= alu_result[20].DB_MAX_OUTPUT_PORT_TYPE
-output2[21] <= alu_result[21].DB_MAX_OUTPUT_PORT_TYPE
-output2[22] <= alu_result[22].DB_MAX_OUTPUT_PORT_TYPE
-output2[23] <= alu_result[23].DB_MAX_OUTPUT_PORT_TYPE
-output2[24] <= alu_result[24].DB_MAX_OUTPUT_PORT_TYPE
-output2[25] <= alu_result[25].DB_MAX_OUTPUT_PORT_TYPE
-output2[26] <= alu_result[26].DB_MAX_OUTPUT_PORT_TYPE
-output2[27] <= alu_result[27].DB_MAX_OUTPUT_PORT_TYPE
-output2[28] <= alu_result[28].DB_MAX_OUTPUT_PORT_TYPE
-output2[29] <= alu_result[29].DB_MAX_OUTPUT_PORT_TYPE
-output2[30] <= alu_result[30].DB_MAX_OUTPUT_PORT_TYPE
-output2[31] <= alu_result[31].DB_MAX_OUTPUT_PORT_TYPE
+output2[0] <= write_in_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+output2[1] <= write_in_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+output2[2] <= write_in_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+output2[3] <= write_in_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+output2[4] <= write_in_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+output2[5] <= write_in_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+output2[6] <= write_in_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+output2[7] <= write_in_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+output2[8] <= write_in_reg[8].DB_MAX_OUTPUT_PORT_TYPE
+output2[9] <= write_in_reg[9].DB_MAX_OUTPUT_PORT_TYPE
+output2[10] <= write_in_reg[10].DB_MAX_OUTPUT_PORT_TYPE
+output2[11] <= write_in_reg[11].DB_MAX_OUTPUT_PORT_TYPE
+output2[12] <= write_in_reg[12].DB_MAX_OUTPUT_PORT_TYPE
+output2[13] <= write_in_reg[13].DB_MAX_OUTPUT_PORT_TYPE
+output2[14] <= write_in_reg[14].DB_MAX_OUTPUT_PORT_TYPE
+output2[15] <= write_in_reg[15].DB_MAX_OUTPUT_PORT_TYPE
+output2[16] <= write_in_reg[16].DB_MAX_OUTPUT_PORT_TYPE
+output2[17] <= write_in_reg[17].DB_MAX_OUTPUT_PORT_TYPE
+output2[18] <= write_in_reg[18].DB_MAX_OUTPUT_PORT_TYPE
+output2[19] <= write_in_reg[19].DB_MAX_OUTPUT_PORT_TYPE
+output2[20] <= write_in_reg[20].DB_MAX_OUTPUT_PORT_TYPE
+output2[21] <= write_in_reg[21].DB_MAX_OUTPUT_PORT_TYPE
+output2[22] <= write_in_reg[22].DB_MAX_OUTPUT_PORT_TYPE
+output2[23] <= write_in_reg[23].DB_MAX_OUTPUT_PORT_TYPE
+output2[24] <= write_in_reg[24].DB_MAX_OUTPUT_PORT_TYPE
+output2[25] <= write_in_reg[25].DB_MAX_OUTPUT_PORT_TYPE
+output2[26] <= write_in_reg[26].DB_MAX_OUTPUT_PORT_TYPE
+output2[27] <= write_in_reg[27].DB_MAX_OUTPUT_PORT_TYPE
+output2[28] <= write_in_reg[28].DB_MAX_OUTPUT_PORT_TYPE
+output2[29] <= write_in_reg[29].DB_MAX_OUTPUT_PORT_TYPE
+output2[30] <= write_in_reg[30].DB_MAX_OUTPUT_PORT_TYPE
+output2[31] <= write_in_reg[31].DB_MAX_OUTPUT_PORT_TYPE
 output3[0] <= current_instr_addr[0].DB_MAX_OUTPUT_PORT_TYPE
 output3[1] <= current_instr_addr[1].DB_MAX_OUTPUT_PORT_TYPE
 output3[2] <= current_instr_addr[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -5754,10 +5756,10 @@ Cond_field[2] => Cond_field[2].IN1
 Cond_field[3] => Cond_field[3].IN1
 clock => clock.IN1
 write_condition <= write_condition.DB_MAX_OUTPUT_PORT_TYPE
-flags[0] <= cpsr_out[0].DB_MAX_OUTPUT_PORT_TYPE
-flags[1] <= cpsr_out[1].DB_MAX_OUTPUT_PORT_TYPE
-flags[2] <= cpsr_out[2].DB_MAX_OUTPUT_PORT_TYPE
-flags[3] <= cpsr_out[3].DB_MAX_OUTPUT_PORT_TYPE
+current_flags[0] <= <GND>
+current_flags[1] <= <GND>
+current_flags[2] <= <GND>
+current_flags[3] <= <GND>
 
 
 |Processor|integrated:modules|CPSR_module:integrated5|FlagVerifier:FlagVerifier
@@ -5776,28 +5778,24 @@ flags[1] => always0.IN1
 flags[1] => always0.IN1
 flags[2] => ~NO_FANOUT~
 flags[3] => ~NO_FANOUT~
-should_operate <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+write_condition <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Processor|integrated:modules|CPSR_module:integrated5|CPSRegister:CPSRegister
 should_set => always0.IN0
-should_operate => always0.IN1
-new_states[0] => current_states_reg[0].DATAIN
-new_states[1] => current_states_reg[1].DATAIN
-new_states[2] => current_states_reg[2].DATAIN
-new_states[3] => current_states_reg[3].DATAIN
-Clock => current_states_reg[0].CLK
-Clock => current_states_reg[1].CLK
-Clock => current_states_reg[2].CLK
-Clock => current_states_reg[3].CLK
-Clock => current_states[0]~reg0.CLK
-Clock => current_states[1]~reg0.CLK
-Clock => current_states[2]~reg0.CLK
-Clock => current_states[3]~reg0.CLK
-current_states[0] <= current_states[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-current_states[1] <= current_states[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-current_states[2] <= current_states[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-current_states[3] <= current_states[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+write_condition => always0.IN1
+new_states[0] => current_states_reg[0]~reg0.DATAIN
+new_states[1] => current_states_reg[1]~reg0.DATAIN
+new_states[2] => current_states_reg[2]~reg0.DATAIN
+new_states[3] => current_states_reg[3]~reg0.DATAIN
+clock => current_states_reg[0]~reg0.CLK
+clock => current_states_reg[1]~reg0.CLK
+clock => current_states_reg[2]~reg0.CLK
+clock => current_states_reg[3]~reg0.CLK
+current_states_reg[0] <= current_states_reg[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+current_states_reg[1] <= current_states_reg[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+current_states_reg[2] <= current_states_reg[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+current_states_reg[3] <= current_states_reg[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Processor|integrated:modules|CPSR_module:integrated5|FlagDecoder:FlagDecoder
@@ -5833,12 +5831,12 @@ result_in[28] => ~NO_FANOUT~
 result_in[29] => ~NO_FANOUT~
 result_in[30] => ~NO_FANOUT~
 result_in[31] => ~NO_FANOUT~
-zero => flags_out[0].DATAIN
-negative => flags_out[1].DATAIN
-flags_out[0] <= zero.DB_MAX_OUTPUT_PORT_TYPE
-flags_out[1] <= negative.DB_MAX_OUTPUT_PORT_TYPE
-flags_out[2] <= <GND>
-flags_out[3] <= <GND>
+zero => new_states[0].DATAIN
+negative => new_states[1].DATAIN
+new_states[0] <= zero.DB_MAX_OUTPUT_PORT_TYPE
+new_states[1] <= negative.DB_MAX_OUTPUT_PORT_TYPE
+new_states[2] <= <GND>
+new_states[3] <= <GND>
 
 
 |Processor|integrated:modules|DataMemory:integrated6

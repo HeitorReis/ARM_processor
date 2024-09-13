@@ -25,7 +25,7 @@ module CPSR_module	(
 		.cond_field(Cond_field),
 		.flags(currrent_flags),
 		
-		.should_operate(write_condition)
+		.write_condition(write_condition)
 
 	);
 

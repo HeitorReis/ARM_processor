@@ -24,16 +24,17 @@ module ALUControl (
 	wire [31:0] operand1;
 	wire [31:0] operand2;
 	
-	// Auxiliar
-	wire [31:0] operand2_check;
-	
 	// Op1 is always RhValue
 	assign operand1 = RhValue;
 	
-	assign operand2_check = {32{is_immediate}};
-	
-	// Op2 can be immediate or RoValue
-	assign operand2 = (immediate_value & operand2_check) | (RoValue & (~ operand2_check));
+	always@(is_immediate or immediate_value or RoValue) begin
+		
+		if (is_immediate)
+			operand2 = immediate_value;
+		else
+			operand2 = RoValue;
+		
+	end
 
 	alu alu (
 		.A(operand1),

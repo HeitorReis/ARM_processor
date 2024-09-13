@@ -21,7 +21,7 @@ module integrated (
 	wire [31:0] extended_immediate;
 	wire [31:0] current_link_value;
 	wire [31:0] alu_result;
-	wire [31:0] write_in_reg;
+	reg [31:0] write_in_reg;
 	wire [31:0] rh_value;
 	wire [31:0] ro_value;
 	
@@ -199,8 +199,12 @@ module integrated (
 	
 	assign should_write_using_ram = ~Load_bit & ~TypeCode[0] & ~TypeCode[1];
 	
-	assign write_in_reg = ({32{should_write_using_ram}} & ram_output) | ({32{~should_write_using_ram}} & alu_result);
+	always@(should_write_using_ram or ram_output or alu_result) begin
 	
-	
+		if (should_write_using_ram)
+			write_in_reg = ram_output;
+		else
+			write_in_reg = alu_result;
+	end	
 	
 endmodule

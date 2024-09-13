@@ -16,8 +16,6 @@ module Processor(
 
 );
 
-	assign LEDR[0] = write_condition;
-
 	freqDiv freqDiv (.CLOCK_50(CLOCK_50), .clk(divided_clock));
 	
 	wire true_clock;
@@ -33,7 +31,7 @@ module Processor(
 		.clock(true_clock),
 		.reset(KEY[3]),
 		
-		.write_condition(LEDR),
+		.write_condition(LEDR[0]),
 		
 		.output0(output0),
 		.output1(output1),
