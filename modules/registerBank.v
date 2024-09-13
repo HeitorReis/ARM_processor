@@ -31,13 +31,6 @@ module registerBank ( // Inputs are Rh, Ro (Op2), Clock, TypeCode, WriteData (to
 
 	reg [31:0] regBank [31:0]; // Register bank
 	reg [31:0] LinkRegister;
-	
-	initial begin
-	
-		regBank[16] = 5'd16;
-		regBank[31] = 5'd31;
-	
-	end
 
 	always@(posedge clock) begin
 		// If should write

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor
-Fri Sep 13 10:40:22 2024
+Fri Sep 13 14:15:55 2024
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -48,11 +48,10 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  40. Port Connectivity Checks: "integrated:modules|InstructionMemory:integrated2"
  41. Port Connectivity Checks: "integrated:modules|ControlUnit:integrated0"
  42. Port Connectivity Checks: "integrated:modules"
- 43. Port Connectivity Checks: "freqDiv:freqDiv"
- 44. Post-Synthesis Netlist Statistics for Top Partition
- 45. Elapsed Time Per Partition
- 46. Analysis & Synthesis Messages
- 47. Analysis & Synthesis Suppressed Messages
+ 43. Post-Synthesis Netlist Statistics for Top Partition
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
+ 46. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -79,15 +78,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 13 10:40:22 2024       ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 13 14:15:54 2024       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; Processor                                   ;
 ; Top-level Entity Name              ; Processor                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,144                                       ;
-;     Total combinational functions  ; 3,146                                       ;
-;     Dedicated logic registers      ; 1,038                                       ;
-; Total registers                    ; 1038                                        ;
+; Total logic elements               ; 4,189                                       ;
+;     Total combinational functions  ; 3,191                                       ;
+;     Dedicated logic registers      ; 1,067                                       ;
+; Total registers                    ; 1067                                        ;
 ; Total pins                         ; 80                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 1,056                                       ;
@@ -195,11 +194,11 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
+;     Processor 6            ;   0.1%      ;
 ;     Processor 7            ;   0.1%      ;
 ;     Processor 8            ;   0.1%      ;
 +----------------------------+-------------+
@@ -265,20 +264,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 4,144      ;
+; Estimated Total logic elements              ; 4,189      ;
 ;                                             ;            ;
-; Total combinational functions               ; 3146       ;
+; Total combinational functions               ; 3191       ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 2171       ;
-;     -- 3 input functions                    ; 807        ;
-;     -- <=2 input functions                  ; 168        ;
+;     -- 4 input functions                    ; 2177       ;
+;     -- 3 input functions                    ; 798        ;
+;     -- <=2 input functions                  ; 216        ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 2478       ;
-;     -- arithmetic mode                      ; 668        ;
+;     -- normal mode                          ; 2496       ;
+;     -- arithmetic mode                      ; 695        ;
 ;                                             ;            ;
-; Total registers                             ; 1038       ;
-;     -- Dedicated logic registers            ; 1038       ;
+; Total registers                             ; 1067       ;
+;     -- Dedicated logic registers            ; 1067       ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
 ; I/O pins                                    ; 80         ;
@@ -288,8 +287,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;            ;
 ; Maximum fan-out node                        ; true_clock ;
 ; Maximum fan-out                             ; 1071       ;
-; Total fan-out                               ; 14911      ;
-; Average fan-out                             ; 3.40       ;
+; Total fan-out                               ; 15061      ;
+; Average fan-out                             ; 3.38       ;
 +---------------------------------------------+------------+
 
 
@@ -298,7 +297,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                            ; Entity Name         ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Processor                                      ; 3146 (1)            ; 1038 (0)                  ; 1056        ; 6            ; 0       ; 3         ; 80   ; 0            ; |Processor                                                                                                                                                                     ; Processor           ; work         ;
+; |Processor                                      ; 3191 (1)            ; 1067 (0)                  ; 1056        ; 6            ; 0       ; 3         ; 80   ; 0            ; |Processor                                                                                                                                                                     ; Processor           ; work         ;
+;    |freqDiv:freqDiv|                            ; 50 (50)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|freqDiv:freqDiv                                                                                                                                                     ; freqDiv             ; work         ;
 ;    |integrated:modules|                         ; 2896 (33)           ; 1038 (0)                  ; 1056        ; 6            ; 0       ; 3         ; 0    ; 0            ; |Processor|integrated:modules                                                                                                                                                  ; integrated          ; work         ;
 ;       |ALUControl:integrated4|                  ; 2117 (684)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |Processor|integrated:modules|ALUControl:integrated4                                                                                                                           ; ALUControl          ; work         ;
 ;          |alu:alu|                              ; 1433 (145)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |Processor|integrated:modules|ALUControl:integrated4|alu:alu                                                                                                                   ; alu                 ; work         ;
@@ -338,12 +338,12 @@ https://fpgasoftware.intel.com/eula.
 ;                |alt_u_div_64f:divider|          ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group1|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider                                         ; alt_u_div_64f       ; work         ;
 ;       |to_display:hex0|                         ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group1|to_display:hex0                                                                                                                         ; to_display          ; work         ;
 ;       |to_display:hex1|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group1|to_display:hex1                                                                                                                         ; to_display          ; work         ;
-;    |output_module:output_group2|                ; 66 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2                                                                                                                                         ; output_module       ; work         ;
-;       |lpm_divide:Div0|                         ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|lpm_divide:Div0                                                                                                                         ; lpm_divide          ; work         ;
-;          |lpm_divide_hhm:auto_generated|        ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|lpm_divide:Div0|lpm_divide_hhm:auto_generated                                                                                           ; lpm_divide_hhm      ; work         ;
-;             |sign_div_unsign_9kh:divider|       ; 32 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                                                               ; sign_div_unsign_9kh ; work         ;
-;                |alt_u_div_64f:divider|          ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider                                         ; alt_u_div_64f       ; work         ;
-;       |to_display:hex0|                         ; 27 (27)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|to_display:hex0                                                                                                                         ; to_display          ; work         ;
+;    |output_module:output_group2|                ; 61 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2                                                                                                                                         ; output_module       ; work         ;
+;       |lpm_divide:Div0|                         ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|lpm_divide:Div0                                                                                                                         ; lpm_divide          ; work         ;
+;          |lpm_divide_hhm:auto_generated|        ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|lpm_divide:Div0|lpm_divide_hhm:auto_generated                                                                                           ; lpm_divide_hhm      ; work         ;
+;             |sign_div_unsign_9kh:divider|       ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                                                               ; sign_div_unsign_9kh ; work         ;
+;                |alt_u_div_64f:divider|          ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider                                         ; alt_u_div_64f       ; work         ;
+;       |to_display:hex0|                         ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|to_display:hex0                                                                                                                         ; to_display          ; work         ;
 ;       |to_display:hex1|                         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group2|to_display:hex1                                                                                                                         ; to_display          ; work         ;
 ;    |output_module:output_group3|                ; 61 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group3                                                                                                                                         ; output_module       ; work         ;
 ;       |lpm_divide:Div0|                         ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Processor|output_module:output_group3|lpm_divide:Div0                                                                                                                         ; lpm_divide          ; work         ;
@@ -459,7 +459,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1038  ;
+; Total registers                              ; 1067  ;
 ; Number of registers using Synchronous Clear  ; 6     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -484,10 +484,10 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Processor|integrated:modules|PC_main:integrated1|instruction_address[24] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Processor|integrated:modules|ALUControl:integrated4|alu:alu|result[31]   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |Processor|integrated:modules|PC_main:integrated1|instruction_address[27] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |Processor|integrated:modules|ALUControl:integrated4|alu:alu|result[22]   ;
 ; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |Processor|integrated:modules|registerBank:integrated3|Mux31              ;
-; 33:1               ; 22 bits   ; 484 LEs       ; 484 LEs              ; 0 LEs                  ; No         ; |Processor|integrated:modules|ALUControl:integrated4|operand2[31]         ;
+; 33:1               ; 22 bits   ; 484 LEs       ; 484 LEs              ; 0 LEs                  ; No         ; |Processor|integrated:modules|ALUControl:integrated4|operand2[10]         ;
 ; 33:1               ; 10 bits   ; 220 LEs       ; 220 LEs              ; 0 LEs                  ; No         ; |Processor|integrated:modules|ALUControl:integrated4|operand2[5]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
 
@@ -950,7 +950,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
 ; OpCode   ; Input  ; Warning  ; Input port expression (2 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "OpCode[3..2]" will be connected to GND. ;
 ; r1_value ; Output ; Info     ; Explicitly unconnected                                                                                                                         ;
-; r2_value ; Output ; Info     ; Explicitly unconnected                                                                                                                         ;
+; r2_value ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                            ;
 +----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -995,40 +995,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "freqDiv:freqDiv"                                                                    ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; clk  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 80                          ;
-; cycloneiii_ff         ; 1038                        ;
+; cycloneiii_ff         ; 1067                        ;
 ;     ENA               ; 1032                        ;
 ;     SCLR              ; 6                           ;
-; cycloneiii_lcell_comb ; 3150                        ;
-;     arith             ; 668                         ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 652                         ;
-;     normal            ; 2482                        ;
+;     plain             ; 29                          ;
+; cycloneiii_lcell_comb ; 3195                        ;
+;     arith             ; 695                         ;
+;         2 data inputs ; 46                          ;
+;         3 data inputs ; 649                         ;
+;     normal            ; 2500                        ;
 ;         0 data inputs ; 42                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 109                         ;
-;         3 data inputs ; 155                         ;
-;         4 data inputs ; 2171                        ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 126                         ;
+;         3 data inputs ; 149                         ;
+;         4 data inputs ; 2177                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 33                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 146.90                      ;
-; Average LUT depth     ; 123.37                      ;
+; Average LUT depth     ; 120.85                      ;
 +-----------------------+-----------------------------+
 
 
@@ -1037,7 +1029,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1047,7 +1039,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Sep 13 10:40:10 2024
+    Info: Processing started: Fri Sep 13 14:15:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor -c Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1086,31 +1078,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file integra
     Info (12023): Found entity 1: integrated File: D:/LabAOC/Processor_V2/integrated.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at PC_main.v(50): created implicit net for "link" File: D:/LabAOC/Processor_V2/modules/PC_main.v Line: 50
 Warning (10236): Verilog HDL Implicit Net warning at Processor.v(19): created implicit net for "divided_clock" File: D:/LabAOC/Processor_V2/Processor.v Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at integrated.v(195): created implicit net for "ram_output" File: D:/LabAOC/Processor_V2/integrated.v Line: 195
+Warning (10236): Verilog HDL Implicit Net warning at integrated.v(196): created implicit net for "ram_output" File: D:/LabAOC/Processor_V2/integrated.v Line: 196
 Info (12127): Elaborating entity "Processor" for the top level hierarchy
 Info (12128): Elaborating entity "freqDiv" for hierarchy "freqDiv:freqDiv" File: D:/LabAOC/Processor_V2/Processor.v Line: 19
 Warning (10230): Verilog HDL assignment warning at freqDiv.v(15): truncated value with size 32 to match size of target (28) File: D:/LabAOC/Processor_V2/modules/freqDiv.v Line: 15
 Info (12128): Elaborating entity "integrated" for hierarchy "integrated:modules" File: D:/LabAOC/Processor_V2/Processor.v Line: 41
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "integrated:modules|ControlUnit:integrated0" File: D:/LabAOC/Processor_V2/integrated.v Line: 90
-Info (12128): Elaborating entity "PC_main" for hierarchy "integrated:modules|PC_main:integrated1" File: D:/LabAOC/Processor_V2/integrated.v Line: 106
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "integrated:modules|ControlUnit:integrated0" File: D:/LabAOC/Processor_V2/integrated.v Line: 91
+Info (12128): Elaborating entity "PC_main" for hierarchy "integrated:modules|PC_main:integrated1" File: D:/LabAOC/Processor_V2/integrated.v Line: 107
 Warning (10036): Verilog HDL or VHDL warning at PC_main.v(50): object "link" assigned a value but never read File: D:/LabAOC/Processor_V2/modules/PC_main.v Line: 50
 Warning (10230): Verilog HDL assignment warning at PC_main.v(50): truncated value with size 32 to match size of target (1) File: D:/LabAOC/Processor_V2/modules/PC_main.v Line: 50
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "integrated:modules|InstructionMemory:integrated2" File: D:/LabAOC/Processor_V2/integrated.v Line: 113
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "integrated:modules|InstructionMemory:integrated2" File: D:/LabAOC/Processor_V2/integrated.v Line: 114
 Warning (10850): Verilog HDL warning at InstructionMemory.v(27): number of words (6) in memory file does not match the number of elements in the address range [0:31] File: D:/LabAOC/Processor_V2/modules/InstructionMemory.v Line: 27
 Warning (10030): Net "rom.data_a" at InstructionMemory.v(14) has no driver or initial value, using a default initial value '0' File: D:/LabAOC/Processor_V2/modules/InstructionMemory.v Line: 14
 Warning (10030): Net "rom.waddr_a" at InstructionMemory.v(14) has no driver or initial value, using a default initial value '0' File: D:/LabAOC/Processor_V2/modules/InstructionMemory.v Line: 14
 Warning (10030): Net "rom.we_a" at InstructionMemory.v(14) has no driver or initial value, using a default initial value '0' File: D:/LabAOC/Processor_V2/modules/InstructionMemory.v Line: 14
 Warning (10034): Output port "first_instr_line_test" at InstructionMemory.v(11) has no driver File: D:/LabAOC/Processor_V2/modules/InstructionMemory.v Line: 11
-Info (12128): Elaborating entity "registerBank" for hierarchy "integrated:modules|registerBank:integrated3" File: D:/LabAOC/Processor_V2/integrated.v Line: 145
-Warning (10855): Verilog HDL warning at registerBank.v(35): initial value for variable regBank should be constant File: D:/LabAOC/Processor_V2/modules/registerBank.v Line: 35
-Info (12128): Elaborating entity "ALUControl" for hierarchy "integrated:modules|ALUControl:integrated4" File: D:/LabAOC/Processor_V2/integrated.v Line: 166
+Info (12128): Elaborating entity "registerBank" for hierarchy "integrated:modules|registerBank:integrated3" File: D:/LabAOC/Processor_V2/integrated.v Line: 146
+Info (12128): Elaborating entity "ALUControl" for hierarchy "integrated:modules|ALUControl:integrated4" File: D:/LabAOC/Processor_V2/integrated.v Line: 167
 Info (12128): Elaborating entity "alu" for hierarchy "integrated:modules|ALUControl:integrated4|alu:alu" File: D:/LabAOC/Processor_V2/modules/ALUControl.v Line: 45
-Info (12128): Elaborating entity "CPSR_module" for hierarchy "integrated:modules|CPSR_module:integrated5" File: D:/LabAOC/Processor_V2/integrated.v Line: 185
+Info (12128): Elaborating entity "CPSR_module" for hierarchy "integrated:modules|CPSR_module:integrated5" File: D:/LabAOC/Processor_V2/integrated.v Line: 186
 Warning (10034): Output port "current_flags" at CPSR_module.v(18) has no driver File: D:/LabAOC/Processor_V2/modules/CPSR_module.v Line: 18
 Info (12128): Elaborating entity "FlagVerifier" for hierarchy "integrated:modules|CPSR_module:integrated5|FlagVerifier:FlagVerifier" File: D:/LabAOC/Processor_V2/modules/CPSR_module.v Line: 30
 Info (12128): Elaborating entity "CPSRegister" for hierarchy "integrated:modules|CPSR_module:integrated5|CPSRegister:CPSRegister" File: D:/LabAOC/Processor_V2/modules/CPSR_module.v Line: 43
 Info (12128): Elaborating entity "FlagDecoder" for hierarchy "integrated:modules|CPSR_module:integrated5|FlagDecoder:FlagDecoder" File: D:/LabAOC/Processor_V2/modules/CPSR_module.v Line: 55
-Info (12128): Elaborating entity "DataMemory" for hierarchy "integrated:modules|DataMemory:integrated6" File: D:/LabAOC/Processor_V2/integrated.v Line: 198
+Info (12128): Elaborating entity "DataMemory" for hierarchy "integrated:modules|DataMemory:integrated6" File: D:/LabAOC/Processor_V2/integrated.v Line: 199
 Warning (10034): Output port "data_saved" at DataMemory.v(14) has no driver File: D:/LabAOC/Processor_V2/modules/DataMemory.v Line: 14
 Info (12128): Elaborating entity "output_module" for hierarchy "output_module:output_group0" File: D:/LabAOC/Processor_V2/Processor.v Line: 52
 Info (12128): Elaborating entity "to_display" for hierarchy "output_module:output_group0|to_display:hex0" File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 25
@@ -1278,7 +1269,7 @@ Warning (21074): Design contains 20 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]" File: D:/LabAOC/Processor_V2/Processor.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[1]" File: D:/LabAOC/Processor_V2/Processor.v Line: 4
     Warning (15610): No output dependent on input pin "KEY[2]" File: D:/LabAOC/Processor_V2/Processor.v Line: 4
-    Warning (15610): No output dependent on input pin "SW[0]" File: D:/LabAOC/Processor_V2/Processor.v Line: 5
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/LabAOC/Processor_V2/Processor.v Line: 4
     Warning (15610): No output dependent on input pin "SW[1]" File: D:/LabAOC/Processor_V2/Processor.v Line: 5
     Warning (15610): No output dependent on input pin "SW[2]" File: D:/LabAOC/Processor_V2/Processor.v Line: 5
     Warning (15610): No output dependent on input pin "SW[3]" File: D:/LabAOC/Processor_V2/Processor.v Line: 5
@@ -1295,17 +1286,17 @@ Warning (21074): Design contains 20 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[14]" File: D:/LabAOC/Processor_V2/Processor.v Line: 5
     Warning (15610): No output dependent on input pin "SW[15]" File: D:/LabAOC/Processor_V2/Processor.v Line: 5
     Warning (15610): No output dependent on input pin "SW[16]" File: D:/LabAOC/Processor_V2/Processor.v Line: 5
-Info (21057): Implemented 4296 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4342 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 4177 logic cells
+    Info (21061): Implemented 4223 logic cells
     Info (21064): Implemented 33 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 78 warnings
-    Info: Peak virtual memory: 4879 megabytes
-    Info: Processing ended: Fri Sep 13 10:40:22 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:10
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
+    Info: Peak virtual memory: 4850 megabytes
+    Info: Processing ended: Fri Sep 13 14:15:55 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +------------------------------------------+

@@ -29,7 +29,7 @@ module Processor(
 	integrated modules(
 	
 		.clock(true_clock),
-		.reset(KEY[3]),
+		.reset(SW[0]),
 		
 		.write_condition(LEDR[0]),
 		
@@ -40,7 +40,7 @@ module Processor(
 	
 	);
 
-	output_module output_group0(
+	output_module output_group0( // r31 value
 
 		.number(output0),
 		
@@ -50,7 +50,7 @@ module Processor(
 		.HEX3()
 
 	);
-	output_module output_group1(
+	output_module output_group1( // r0 value
 
 		.number(output1),
 		
@@ -60,7 +60,7 @@ module Processor(
 		.HEX3()
 
 	);
-	output_module output_group2(
+	output_module output_group2( // ALU Result
 
 		.number(output2),
 		
@@ -70,7 +70,7 @@ module Processor(
 		.HEX3()
 
 	);
-	output_module output_group3(
+	output_module output_group3( // Current Instr
 
 		.number(output3),
 		

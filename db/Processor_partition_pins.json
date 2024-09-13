@@ -232,15 +232,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[3]",
-					"strict" : false
-				},
-				{
-					"name" : "CLOCK_50",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
 					"name" : "SW[17]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
 					"strict" : false
 				}
 			]

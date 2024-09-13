@@ -14,7 +14,7 @@ module integrated (
 
 	assign output0 = r31_value;
 	assign output1 = r0_value;
-	assign output2 = write_in_reg;
+	assign output2 = alu_result;
 	assign output3 = current_instr_addr;
 
 	// Values
@@ -25,6 +25,7 @@ module integrated (
 	wire [31:0] rh_value;
 	wire [31:0] ro_value;
 	
+	wire [31:0] op2_value;
 	wire [31:0] r0_value;
 	wire [31:0] r31_value;
 
@@ -162,7 +163,7 @@ module integrated (
 		.result(alu_result),
 		
 		.r1_value(), // A
-		.r2_value() // B
+		.r2_value(op2_value) // B
 	);
 
 	CPSR_module	integrated5(
