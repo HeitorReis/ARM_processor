@@ -6,7 +6,7 @@ module freqDiv (CLOCK_50, clk);
 
 	always @ (posedge CLOCK_50)
 	begin
-		if(OUT == 27'd50000000)
+		if(OUT == 27'd50)
 		begin
 			OUT = 0;
 			S = 1;

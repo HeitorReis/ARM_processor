@@ -1,4 +1,4 @@
-Info (10281): Verilog HDL Declaration information at output_module.v(5): object "HEX0" differs only in case from object "hex0" in the same scope File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 5
-Info (10281): Verilog HDL Declaration information at output_module.v(6): object "HEX1" differs only in case from object "hex1" in the same scope File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 6
-Info (10281): Verilog HDL Declaration information at output_module.v(7): object "HEX2" differs only in case from object "hex2" in the same scope File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 7
-Info (10281): Verilog HDL Declaration information at output_module.v(10): object "HEX3" differs only in case from object "hex3" in the same scope File: D:/LabAOC/Processor_V2/modules/output_module.v Line: 10
+Info (10281): Verilog HDL Declaration information at output_module.v(5): object "HEX0" differs only in case from object "hex0" in the same scope File: D:/LabAOC/LAB_REMOTO_Processor/LabRemoto_restored/modules/output_module.v Line: 5
+Info (10281): Verilog HDL Declaration information at output_module.v(6): object "HEX1" differs only in case from object "hex1" in the same scope File: D:/LabAOC/LAB_REMOTO_Processor/LabRemoto_restored/modules/output_module.v Line: 6
+Info (10281): Verilog HDL Declaration information at output_module.v(7): object "HEX2" differs only in case from object "hex2" in the same scope File: D:/LabAOC/LAB_REMOTO_Processor/LabRemoto_restored/modules/output_module.v Line: 7
+Info (10281): Verilog HDL Declaration information at output_module.v(10): object "HEX3" differs only in case from object "hex3" in the same scope File: D:/LabAOC/LAB_REMOTO_Processor/LabRemoto_restored/modules/output_module.v Line: 10

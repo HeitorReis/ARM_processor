@@ -1,0 +1,259 @@
+Restore Archived Project report for Processor
+Sat Sep 14 16:56:55 2024
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Sat Sep 14 16:56:55 2024 ;
+; Revision Name                   ; Processor                             ;
+; Top-level Entity Name           ; Processor                             ;
+; Family                          ; Cyclone IV E                          ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'D:/LabAOC/LAB_REMOTO_Processor/LabRemoto.qar' into the 'D:/LabAOC/LAB_REMOTO_Processor/LabRemoto_restored/' directory
+Info: Generated report 'Processor.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/19.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Sat Sep 14 16:56:55 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++------------------------------------------------------------------------------+
+; Files Restored                                                               ;
++------------------------------------------------------------------------------+
+; File Name                                                                    ;
++------------------------------------------------------------------------------+
+; qar_info.json                                                                ;
+; Processor.qpf                                                                ;
+; Processor.qsf                                                                ;
+; Processor.v                                                                  ;
+; Waveform.vwf                                                                 ;
+; db/Processor.(0).cnf.cdb                                                     ;
+; db/Processor.(0).cnf.hdb                                                     ;
+; db/Processor.(1).cnf.cdb                                                     ;
+; db/Processor.(1).cnf.hdb                                                     ;
+; db/Processor.(10).cnf.cdb                                                    ;
+; db/Processor.(10).cnf.hdb                                                    ;
+; db/Processor.(11).cnf.cdb                                                    ;
+; db/Processor.(11).cnf.hdb                                                    ;
+; db/Processor.(12).cnf.cdb                                                    ;
+; db/Processor.(12).cnf.hdb                                                    ;
+; db/Processor.(13).cnf.cdb                                                    ;
+; db/Processor.(13).cnf.hdb                                                    ;
+; db/Processor.(14).cnf.cdb                                                    ;
+; db/Processor.(14).cnf.hdb                                                    ;
+; db/Processor.(15).cnf.cdb                                                    ;
+; db/Processor.(15).cnf.hdb                                                    ;
+; db/Processor.(16).cnf.cdb                                                    ;
+; db/Processor.(16).cnf.hdb                                                    ;
+; db/Processor.(17).cnf.cdb                                                    ;
+; db/Processor.(17).cnf.hdb                                                    ;
+; db/Processor.(18).cnf.cdb                                                    ;
+; db/Processor.(18).cnf.hdb                                                    ;
+; db/Processor.(19).cnf.cdb                                                    ;
+; db/Processor.(19).cnf.hdb                                                    ;
+; db/Processor.(2).cnf.cdb                                                     ;
+; db/Processor.(2).cnf.hdb                                                     ;
+; db/Processor.(20).cnf.cdb                                                    ;
+; db/Processor.(20).cnf.hdb                                                    ;
+; db/Processor.(21).cnf.cdb                                                    ;
+; db/Processor.(21).cnf.hdb                                                    ;
+; db/Processor.(22).cnf.cdb                                                    ;
+; db/Processor.(22).cnf.hdb                                                    ;
+; db/Processor.(23).cnf.cdb                                                    ;
+; db/Processor.(23).cnf.hdb                                                    ;
+; db/Processor.(24).cnf.cdb                                                    ;
+; db/Processor.(24).cnf.hdb                                                    ;
+; db/Processor.(25).cnf.cdb                                                    ;
+; db/Processor.(25).cnf.hdb                                                    ;
+; db/Processor.(26).cnf.cdb                                                    ;
+; db/Processor.(26).cnf.hdb                                                    ;
+; db/Processor.(27).cnf.cdb                                                    ;
+; db/Processor.(27).cnf.hdb                                                    ;
+; db/Processor.(28).cnf.cdb                                                    ;
+; db/Processor.(28).cnf.hdb                                                    ;
+; db/Processor.(29).cnf.cdb                                                    ;
+; db/Processor.(29).cnf.hdb                                                    ;
+; db/Processor.(3).cnf.cdb                                                     ;
+; db/Processor.(3).cnf.hdb                                                     ;
+; db/Processor.(30).cnf.cdb                                                    ;
+; db/Processor.(30).cnf.hdb                                                    ;
+; db/Processor.(31).cnf.cdb                                                    ;
+; db/Processor.(31).cnf.hdb                                                    ;
+; db/Processor.(32).cnf.cdb                                                    ;
+; db/Processor.(32).cnf.hdb                                                    ;
+; db/Processor.(34).cnf.cdb                                                    ;
+; db/Processor.(34).cnf.hdb                                                    ;
+; db/Processor.(4).cnf.cdb                                                     ;
+; db/Processor.(4).cnf.hdb                                                     ;
+; db/Processor.(5).cnf.cdb                                                     ;
+; db/Processor.(5).cnf.hdb                                                     ;
+; db/Processor.(6).cnf.cdb                                                     ;
+; db/Processor.(6).cnf.hdb                                                     ;
+; db/Processor.(7).cnf.cdb                                                     ;
+; db/Processor.(7).cnf.hdb                                                     ;
+; db/Processor.(8).cnf.cdb                                                     ;
+; db/Processor.(8).cnf.hdb                                                     ;
+; db/Processor.(9).cnf.cdb                                                     ;
+; db/Processor.(9).cnf.hdb                                                     ;
+; db/Processor.archive.qmsg                                                    ;
+; db/Processor.asm.qmsg                                                        ;
+; db/Processor.asm.rdb                                                         ;
+; db/Processor.asm_labs.ddb                                                    ;
+; Processor.cbx.xml                                                            ;
+; db/Processor.cmp.bpm                                                         ;
+; db/Processor.cmp.cdb                                                         ;
+; db/Processor.cmp.hdb                                                         ;
+; db/Processor.cmp.idb                                                         ;
+; db/Processor.cmp.logdb                                                       ;
+; db/Processor.cmp.rdb                                                         ;
+; db/Processor.cmp_merge.kpt                                                   ;
+; db/Processor.cycloneive_io_sim_cache.45um_ff_1200mv_0c_fast.hsd              ;
+; db/Processor.cycloneive_io_sim_cache.45um_ii_1200mv_0c_slow.hsd              ;
+; db/Processor.cycloneive_io_sim_cache.45um_ii_1200mv_85c_slow.hsd             ;
+; db/Processor.db_info                                                         ;
+; db/Processor.eda.qmsg                                                        ;
+; db/Processor.fit.qmsg                                                        ;
+; db/Processor.hier_info                                                       ;
+; db/Processor.hif                                                             ;
+; db/Processor.lpc.html                                                        ;
+; db/Processor.lpc.rdb                                                         ;
+; db/Processor.lpc.txt                                                         ;
+; db/Processor.map.ammdb                                                       ;
+; db/Processor.map.bpm                                                         ;
+; db/Processor.map.cdb                                                         ;
+; db/Processor.map.hdb                                                         ;
+; db/Processor.map.kpt                                                         ;
+; db/Processor.map.logdb                                                       ;
+; db/Processor.map.qmsg                                                        ;
+; db/Processor.map.rdb                                                         ;
+; db/Processor.map_bb.cdb                                                      ;
+; db/Processor.map_bb.hdb                                                      ;
+; db/Processor.map_bb.logdb                                                    ;
+; db/Processor.pplq.rdb                                                        ;
+; db/Processor.pre_map.hdb                                                     ;
+; db/Processor.ram0_DataMemory_5d7c1658.hdl.mif                                ;
+; db/Processor.ram0_InstructionMemory_d1968ec4.hdl.mif                         ;
+; db/Processor.root_partition.map.reg_db.cdb                                   ;
+; db/Processor.routing.rdb                                                     ;
+; db/Processor.rtlv.hdb                                                        ;
+; db/Processor.rtlv_sg.cdb                                                     ;
+; db/Processor.rtlv_sg_swap.cdb                                                ;
+; db/Processor.sld_design_entry.sci                                            ;
+; db/Processor.sld_design_entry_dsc.sci                                        ;
+; db/Processor.smart_action.txt                                                ;
+; db/Processor.sta.qmsg                                                        ;
+; db/Processor.sta.rdb                                                         ;
+; db/Processor.sta_cmp.7_slow_1200mv_85c.tdb                                   ;
+; db/Processor.tis_db_list.ddb                                                 ;
+; db/Processor.tiscmp.fast_1200mv_0c.ddb                                       ;
+; db/Processor.tiscmp.slow_1200mv_0c.ddb                                       ;
+; db/Processor.tiscmp.slow_1200mv_85c.ddb                                      ;
+; db/Processor.tmw_info                                                        ;
+; db/Processor.vpr.ammdb                                                       ;
+; db/abs_divider_4dg.tdf                                                       ;
+; db/add_sub_7pc.tdf                                                           ;
+; db/add_sub_8pc.tdf                                                           ;
+; db/alt_u_div_64f.tdf                                                         ;
+; db/alt_u_div_6af.tdf                                                         ;
+; db/altsyncram_b981.tdf                                                       ;
+; db/lpm_abs_i0a.tdf                                                           ;
+; db/lpm_divide_92p.tdf                                                        ;
+; db/lpm_divide_hhm.tdf                                                        ;
+; db/mult_46t.tdf                                                              ;
+; db/sign_div_unsign_9kh.tdf                                                   ;
+; incremental_db/compiled_partitions/Processor.db_info                         ;
+; incremental_db/compiled_partitions/Processor.root_partition.cmp.cdb          ;
+; incremental_db/compiled_partitions/Processor.root_partition.cmp.dfp          ;
+; incremental_db/compiled_partitions/Processor.root_partition.cmp.hdb          ;
+; incremental_db/compiled_partitions/Processor.root_partition.cmp.logdb        ;
+; incremental_db/compiled_partitions/Processor.root_partition.cmp.rcfdb        ;
+; incremental_db/compiled_partitions/Processor.root_partition.map.cdb          ;
+; incremental_db/compiled_partitions/Processor.root_partition.map.dpi          ;
+; incremental_db/compiled_partitions/Processor.root_partition.map.hbdb.cdb     ;
+; incremental_db/compiled_partitions/Processor.root_partition.map.hbdb.hb_info ;
+; incremental_db/compiled_partitions/Processor.root_partition.map.hbdb.hdb     ;
+; incremental_db/compiled_partitions/Processor.root_partition.map.hbdb.sig     ;
+; incremental_db/compiled_partitions/Processor.root_partition.map.hdb          ;
+; incremental_db/compiled_partitions/Processor.root_partition.map.kpt          ;
+; incremental_db/compiled_partitions/Processor.rrp.hdb                         ;
+; integrated.v                                                                 ;
+; modules/ALUControl.v                                                         ;
+; modules/CPSR_module.v                                                        ;
+; modules/CPSRegister.v                                                        ;
+; modules/ControlUnit.v                                                        ;
+; modules/DataMemory.v                                                         ;
+; modules/FlagDecoder.v                                                        ;
+; modules/FlagVerifier.v                                                       ;
+; modules/InstructionMemory.v                                                  ;
+; modules/PC_main.v                                                            ;
+; modules/alu.v                                                                ;
+; modules/freqDiv.v                                                            ;
+; modules/output_module.v                                                      ;
+; modules/registerBank.v                                                       ;
+; modules/single_port_rom_init.txt                                             ;
+; output_files/Processor.asm.rpt                                               ;
+; output_files/Processor.eda.rpt                                               ;
+; output_files/Processor.fit.rpt                                               ;
+; output_files/Processor.fit.smsg                                              ;
+; output_files/Processor.fit.summary                                           ;
+; output_files/Processor.flow.rpt                                              ;
+; output_files/Processor.jdi                                                   ;
+; output_files/Processor.map.rpt                                               ;
+; output_files/Processor.map.smsg                                              ;
+; output_files/Processor.map.summary                                           ;
+; output_files/Processor.pin                                                   ;
+; output_files/Processor.sld                                                   ;
+; output_files/Processor.sof                                                   ;
+; output_files/Processor.sta.rpt                                               ;
+; output_files/Processor.sta.summary                                           ;
+; assignment_defaults.qdf                                                      ;
++------------------------------------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
